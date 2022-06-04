@@ -1,0 +1,58 @@
+ 
+.card{
+    background-color: rgb(151, 148, 148);
+    text-align: center;
+    margin: auto;
+    width: 40em;
+}
+.card-body{
+    background-color: rgb(255, 253, 253);
+    text-align: center;
+    margin: auto;
+    width: 40em;   
+}
+.rad{
+
+    border-radius: 2px;
+        border: 1px solid;
+        padding: 3px;
+        width: 100px;
+        margin-top: 3px;
+    }
+    
+      .com{
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 2px;
+        width: 100px;
+        margin-top: 3px;
+      }
+      input{
+        border-radius: 5px;
+        border: 1px solid;
+        padding: 3px;
+        width: 300px;
+        margin-top: 5px;
+        
+      }
+      label {
+        width: 200px;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 10px;
+      }
+      label.error {
+        color: red;
+      
+        
+        margin-top: 5px;
+      }
+      
+      input.error {
+        border: 1px dashed red;
+        font-weight: 300;
+        color: red;
+      }
+     
+
+  

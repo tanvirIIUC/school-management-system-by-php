@@ -1,0 +1,48 @@
+.navi{
+    background: #002147;
+    height: 70px;
+}
+.brnd{
+    float: left;
+    font-size: 1em;
+    
+    padding-left: 20px;
+    line-height: 70px;
+    text-transform: uppercase;
+  
+}
+
+
+a{
+   color: #f8f6f6;
+   text-decoration: none;
+}
+p{
+    color: #f8f6f6;
+}
+.scl{
+    padding-left: 20px;
+    line-height: 70px;
+    float: right;
+    margin-right: 5em;
+    font-size: 2em;
+}
+.ab{
+  
+    text-align: center;
+   width: 20em;
+
+}
+hr{
+    padding: 1px;
+}
+.pic1{
+     width: 30em;
+     margin-left: 5cm;
+     float: left;
+}
+.wc{
+  
+     width: 20em;
+
+}
