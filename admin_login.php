@@ -8,25 +8,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./style_home.css">
-	<title>student_login</title>
+	<title>admin login</title>
 </head>
 <body>
 	
 <?php
 
-if(isset($_POST['stdid'])){
-   $std_id= $_POST['stdid'];
-   $std_pass= $_POST['pass'];
+if(isset($_POST['username'])){
+   $admin_name= $_POST['username'];
+   $admin_pass= $_POST['pass'];
 
    $connection=mysqli_connect("localhost","root","","school_management");
-   $sql= (" SELECT * FROM student_info WHERE Student_Id='$std_id' AND Password='$std_pass' ");
+   $sql= (" SELECT * FROM admin_login WHERE Username='$admin_name' AND password='$admin_pass' ");
 
     $query=$connection->query($sql);
    if(mysqli_num_rows($query)>0){
-	  header('location:student_page.php');
+	  header('location:admin_page.php');
 
    }
-   else echo 'Wrong Password Or id';
+   else echo 'Wrong Password Or username';
 
 }
 
@@ -39,7 +39,7 @@ if(isset($_POST['stdid'])){
        <div class="brnd">
        <a class="active" href="home.php"><b><em>Home</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="student_login.php"><b><em>Student</b></em></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="teacher_login"><b><em>Teacher</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="teacher_login.php"><b><em>Teacher</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="home.php"><em><b>About</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
        </div>
@@ -57,7 +57,7 @@ if(isset($_POST['stdid'])){
     <div class="card">
       <div class="card-body">
        
-        <img src="ab2.jpg" class="card-img-top" alt="...">
+        <img src="login-box-finger-pushing-username-password-fields-office-background-62243752.jpg" class="card-img-top" alt="...">
         
       </div>
     </div>
@@ -67,10 +67,10 @@ if(isset($_POST['stdid'])){
     <div class="card">
       
       <div class="card-body" style=" background-color: #002147;">
-        <h5 style="color:rgb(250, 250, 252);" class="card-title">student login</h5>
+        <h5 style="color:rgb(250, 250, 252);" class="card-title">Admin login</h5>
         <p>
-             <label style="color:rgb(250, 250, 252);">Id</label>
-             <input type="text" name="stdid" required>
+             <label style="color:rgb(250, 250, 252);">Username</label>
+             <input type="text" name="username" required>
          </p>
          
          <p>
@@ -79,7 +79,7 @@ if(isset($_POST['stdid'])){
          </p>
 
 	<input class="btn btn-primary" type="submit" value="Submit">
-    <a href="student_create.php" class="btn btn-primary">create</a>
+    
       </div>
 
     </div>
