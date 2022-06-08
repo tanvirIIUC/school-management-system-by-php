@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>student_page</title>
-</head>
-<body>
-    
-<!DOCTYPE html>
-<html lang="en">
-<head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./style_home.css">
-	<title>Result</title>
+	<title>teacherlist</title>
 </head>
 <body>
 	
@@ -26,7 +16,7 @@
 <section class="navi">   
        <div class="brnd">
        <a class="active" href="home.php"><b><em>Home</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <!-- <a href="admin_page.php"><b><em>Admin</b></em></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+  <a href="admin_page.php"><b><em>Admin</b></em></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <!-- <a href=""><b><em>Teacher</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
   <!-- <a href="home.php"><em><b>About</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
        </div>
@@ -56,7 +46,8 @@ $query=mysqli_query($connection,"SELECT * FROM student_result");
     <td>Science</td>
     <td>Religion</td>
     <td>Class</td>
-    
+    <td>Create_time</td>
+    <td>Delete</td>
   
 </tr> 
  
@@ -77,6 +68,11 @@ $id=$row['id'];
     <td><?php echo $row['Science']?></td>
     <td><?php echo $row['Religion']?></td>
     <td><?php echo $row['Class']?></td>
+    <td><?php echo $row['Create_time']?></td>
+
+    <td>
+        <a href="result_delete.php?id=<?php echo $id?>">Delete</a>
+    </td>
     
 </tr>
     <?php
@@ -84,10 +80,6 @@ $id=$row['id'];
 ?>
 </table>
 
-
-
-</body>
-</html>
 
 
 </body>
