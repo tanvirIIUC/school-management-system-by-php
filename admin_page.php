@@ -80,6 +80,7 @@ $query=mysqli_query($connection,"SELECT * FROM notice");
     <td>Notice</td>
     <td>DATE_time</td>
     <td>Delete</td>
+    <td>Edit</td>
   
 </tr> 
  
@@ -98,6 +99,9 @@ $id=$row['id'];
     <td>
         <a href="notice_delete.php?id=<?php echo $id?>">Delete</a>
     </td>
+    <td>
+		<a href="n_edit.php?id=<?php echo $id?>">Edit</a>
+			</td>
     
 </tr>
     <?php
