@@ -33,7 +33,7 @@
     <div class="card">
     <div class="card-body" style=" background-color: #002147;">
     <h5 style="color:rgb(250, 250, 252);" class="card-title">Result Post</h5>
-  <form action="" method="POST">
+         <form action="" method="POST">
          <p>
            <label>Username</label>
            <input type="text" name="stdname" required/>
@@ -74,9 +74,9 @@
          </p>
          
 
-	<input class="btn btn-primary" type="submit" value="SUBMIT">
+	         <input class="btn btn-primary" type="submit" value="SUBMIT">
     
-    </form>
+            </form>
   </div>
     </div>
   </div>

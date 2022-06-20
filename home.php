@@ -21,6 +21,7 @@
        <a href="student_login.php"><b><em>Student</b></em></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        <a href="teacher_login.php"><b><em>Teacher</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        <a href="#about"><em><b>About</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="notice_show.php"><em><b>notice</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
        </div>
        <div class="scl"> <p> <b><em>SCHOOL</em></b></p>   </div>

@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./style_home.css">
-	<title>teacherlist</title>
+	<title>Result show</title>
 </head>
 <body>
 	
@@ -48,6 +48,7 @@ $query=mysqli_query($connection,"SELECT * FROM student_result");
     <td>Class</td>
     <td>Create_time</td>
     <td>Delete</td>
+    <td>Edit</td>
   
 </tr> 
  
@@ -56,6 +57,7 @@ $query=mysqli_query($connection,"SELECT * FROM student_result");
 while($row=mysqli_fetch_array($query))
 {
 $id=$row['id'];
+
     ?>
     <tr>
    
@@ -73,6 +75,10 @@ $id=$row['id'];
     <td>
         <a href="result_delete.php?id=<?php echo $id?>">Delete</a>
     </td>
+
+    <td>
+		<a href="r_edit.php?id=<?php echo $id?>">Edit</a>
+			</td>
     
 </tr>
     <?php
