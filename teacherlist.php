@@ -47,7 +47,7 @@ $query=mysqli_query($connection,"SELECT * FROM teacher_info");
     <td>Password</td>
     <td>Create_time</td>
     <td>Delete</td>
-  
+    <td>Edit</td>
 </tr> 
  
 <?php
@@ -72,6 +72,9 @@ $id=$row['id'];
     <td>
         <a href="teacher_delete.php?id=<?php echo $id?>">Delete</a>
     </td>
+    <td>
+		<a href="t_edit.php?id=<?php echo $id?>">Edit</a>
+	</td>
     
 </tr>
     <?php

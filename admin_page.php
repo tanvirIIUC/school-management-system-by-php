@@ -30,7 +30,7 @@
     <div class="card">
     <div class="card-body" style=" background-color: #002147;">
     <h5 style="color:rgb(250, 250, 252);" class="card-title">Notice Post</h5>
-  <form action="" method="POST">
+  <form action="notice_add.php" method="POST">
          <!-- <p> 
            <label>Username</label>
            <input type="text" name="stdname" required/>
@@ -38,12 +38,10 @@
         
          <div class="form-floating" >
   <textarea name="notice" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 300px;"></textarea>
-  
-</div>
-
-         
+ 
+   </div>         
 <br>
-	<input class="btn btn-primary" type="submit" value="SUBMIT">
+	    <input class="btn btn-primary" type="submit" value="SUBMIT">
     
     </form>
   </div>
@@ -53,15 +51,7 @@
 
 
 
-    <?php
     
-        $notice=$_POST['notice'];
- 
-    $connection=mysqli_connect("localhost","root","","school_management");
-    mysqli_query($connection,"INSERT INTO notice(notice) 
-    VALUES('$notice')");
-
-    ?>
 
 <?php
 
