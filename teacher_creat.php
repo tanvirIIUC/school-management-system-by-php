@@ -77,9 +77,9 @@
 
        <div class="brnd">
        <a class="active" href="home.php"><b><em>Home</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="student_login.php"><b><em>Student</b></em></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#contact"><b><em>Teacher</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#about"><em><b>About</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <!-- <a href="student_login.php"><b><em>Student</b></em></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+  <!-- <a href="#contact"><b><em>Teacher</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+  <!-- <a href="#about"><em><b>About</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 
        </div>
        <div class="scl"> <p> <b><em>SCHOOL</em></b></p>   </div>
@@ -92,7 +92,7 @@
     <div class="card">
       <div class="card-body">
        
-        <img src="std-create.png" class="card-img-top" alt="...">
+        <img src="148-1488117_teacher-login-icon-teacher.png" class="card-img-top" alt="...">
         
       </div>
     </div>
@@ -101,7 +101,7 @@
     <div class="card">
     <div class="card-body" style=" background-color: #002147;">
     <h5 style="color:rgb(250, 250, 252);" class="card-title">TEACHER CREATE</h5>
-  <form action="" method="POST">
+  <form action="teacher_add.php" method="POST">
          <p>
            <label>Username</label>
            <input type="text" name="tname" required/>
@@ -207,22 +207,7 @@
     </form>
   </div>
 </div>   -->
-    <?php
-    
-        $tname=$_POST['tname'];
-        $tid=$_POST['tid'];
-        $tphn=$_POST['phone'];
-        $temail=$_POST['email'];
-        $tgnde=$_POST['gender'];
-        $tdstc=$_POST['distric'];
-        $tpass=$_POST['pass'];
-        
-
-    $connection=mysqli_connect("localhost","root","","school_management");
-    mysqli_query($connection,"INSERT INTO teacher_info(Username,T_id,Phone,Email,Gender,District,Password) 
-    VALUES('$tname','$tid','$tphn','$temail','$tgnde','$tdstc','$tpass')");
-
-    ?>
+  
 
 
 </body>

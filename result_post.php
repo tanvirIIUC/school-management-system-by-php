@@ -33,7 +33,7 @@
     <div class="card">
     <div class="card-body" style=" background-color: #002147;">
     <h5 style="color:rgb(250, 250, 252);" class="card-title">Result Post</h5>
-         <form action="" method="POST">
+         <form action="result_add.php" method="POST">
          <p>
            <label>Username</label>
            <input type="text" name="stdname" required/>
@@ -81,26 +81,6 @@
     </div>
   </div>
 </div>
-
-
-
-    <?php
-    
-        $stdname=$_POST['stdname'];
-        $stid=$_POST['stid'];
-        $bangla=$_POST['bangla'];
-        $english=$_POST['english'];
-        $math=$_POST['math'];
-        $science=$_POST['science'];
-        $religion=$_POST['religion'];
-        $class=$_POST['class'];
-        
-
-    $connection=mysqli_connect("localhost","root","","school_management");
-    mysqli_query($connection,"INSERT INTO student_result(Username,Student_Id,Bangla,English,Math,Science,Religion,Class) 
-    VALUES('$stdname','$stid','$bangla','$english','$math','$science','$religion','$class')");
-
-    ?>
 
 
 </body>

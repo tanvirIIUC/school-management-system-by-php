@@ -101,7 +101,7 @@
     <div class="card">
     <div class="card-body" style=" background-color: #002147;">
     <h5 style="color:rgb(250, 250, 252);" class="card-title">STUDENT CREATE</h5>
-  <form action="" method="POST">
+  <form action="student_add.php" method="POST">
          <p>
            <label>Username</label>
            <input type="text" name="stdname" required/>
@@ -212,22 +212,7 @@
     </form>
   </div>
 </div>   -->
-    <?php
     
-        $stdname=$_POST['stdname'];
-        $studentid=$_POST['stdid'];
-        $studentphn=$_POST['phone'];
-        $studentemail=$_POST['email'];
-        $studentgnde=$_POST['gender'];
-        $studentdstc=$_POST['distric'];
-        $studentpass=$_POST['pass'];
-        $studentclas=$_POST['stdcls'];
-
-    $connection=mysqli_connect("localhost","root","","school_management");
-    mysqli_query($connection,"INSERT INTO student_info(Username,Student_Id,Phone,Email,Gender,District,Password,Class) 
-    VALUES('$stdname','$studentid','$studentphn','$studentemail','$studentgnde','$studentdstc','$studentpass','$studentclas')");
-
-    ?>
 
 
 </body>

@@ -30,11 +30,7 @@
     <div class="card">
     <div class="card-body" style=" background-color: #002147;">
     <h5 style="color:rgb(250, 250, 252);" class="card-title">Notice Post</h5>
-  <form action="notice_add.php" method="POST">
-         <!-- <p> 
-           <label>Username</label>
-           <input type="text" name="stdname" required/>
-         </p>-->
+  <form action="notice_add.php" method="POST">        
         
          <div class="form-floating" >
   <textarea name="notice" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 300px;"></textarea>
@@ -48,8 +44,6 @@
     </div>
   </div>
 </div>
-
-
 
     
 
