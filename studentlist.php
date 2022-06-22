@@ -48,6 +48,7 @@ $query=mysqli_query($connection,"SELECT * FROM student_info");
     <td>Class</td>
     <td>Create_time</td>
     <td>Delete</td>
+    <td>Edit</td>
   
 </tr> 
  
@@ -73,6 +74,9 @@ $id=$row['id'];
     <td>
         <a href="student_delete.php?id=<?php echo $id?>">Delete</a>
     </td>
+    <td>
+		<a href="s_edit.php?id=<?php echo $id?>">Edit</a>
+	</td>
     
 </tr>
     <?php
