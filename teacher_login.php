@@ -73,7 +73,7 @@ if(isset($_POST['tid'])){
              <input type="password" name="pass" minlength="5" required/>
          </p>
 
-	<input class="btn btn-primary" type="submit" value="Submit">
+	<input class="btn btn-primary" type="submit" value="Log in">
     <a href="teacher_creat.php" class="btn btn-primary">create</a>
       </div>
     </div>

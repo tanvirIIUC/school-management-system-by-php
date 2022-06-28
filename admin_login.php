@@ -78,7 +78,7 @@ if(isset($_POST['username'])){
              <input type="password" name="pass" minlength="5" required/>
          </p>
 
-	<input class="btn btn-primary" type="submit" value="Submit">
+	<input class="btn btn-primary" type="submit" value="Log in">
     
       </div>
 

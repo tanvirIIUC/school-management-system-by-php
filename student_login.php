@@ -78,7 +78,7 @@ if(isset($_POST['stdid'])){
              <input type="password" name="pass" minlength="5" required/>
          </p>
 
-	<input class="btn btn-primary" type="submit" value="Submit">
+	<input class="btn btn-primary" type="submit" value="Log in">
     <a href="student_create.php" class="btn btn-primary">create</a>
       </div>
 
