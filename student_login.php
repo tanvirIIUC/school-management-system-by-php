@@ -13,9 +13,10 @@
 <body>
 	
 <?php
-
-if(isset($_POST['stdid'])){
-   $std_id= $_POST['stdid'];
+session_start();
+if(isset($_POST['submit'])){
+   
+   $std_id=   $_POST['stdid'];
    $std_pass= $_POST['pass'];
 
    $connection=mysqli_connect("localhost","root","","school_management");
@@ -23,10 +24,14 @@ if(isset($_POST['stdid'])){
 
     $query=$connection->query($sql);
    if(mysqli_num_rows($query)>0){
-	  header('location:student_page.php');
+    $row = mysqli_fetch_assoc($query);
+    $_SESSION['s_id']= $row['Student_Id'];
+	  header('location:student_profile.php');
 
    }
-   else echo 'Wrong Password Or id';
+    else echo 'Wrong Password Or id';
+  
+
 
 }
 
@@ -78,7 +83,7 @@ if(isset($_POST['stdid'])){
              <input type="password" name="pass" minlength="5" required/>
          </p>
 
-	<input class="btn btn-primary" type="submit" value="Log in">
+	<input class="btn btn-primary" type="submit" name="submit" value="Log in">
     <a href="student_create.php" class="btn btn-primary">create</a>
       </div>
 

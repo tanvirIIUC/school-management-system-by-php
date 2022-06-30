@@ -13,8 +13,8 @@
 <body>
 	
 <?php
-
-if(isset($_POST['tid'])){
+session_start();
+if(isset($_POST['submit'])){
    $t_id= $_POST['tid'];
    $t_pass= $_POST['pass'];
 
@@ -23,7 +23,9 @@ if(isset($_POST['tid'])){
 
     $query=$connection->query($sql);
    if(mysqli_num_rows($query)>0){
-	  header('location:teacher_page.php');
+    $row = mysqli_fetch_assoc($query);
+      $_SESSION['tsr_id'] = $row['id'];
+	  header('location:teacher_profile.php');
 
    }
    else echo 'Wrong Password Or id';
@@ -31,6 +33,7 @@ if(isset($_POST['tid'])){
 }
 
 ?>
+
 
 <section class="navi"> 
 
@@ -73,7 +76,7 @@ if(isset($_POST['tid'])){
              <input type="password" name="pass" minlength="5" required/>
          </p>
 
-	<input class="btn btn-primary" type="submit" value="Log in">
+	<input class="btn btn-primary" type="submit" name="submit" value="Log in">
     <a href="teacher_creat.php" class="btn btn-primary">create</a>
       </div>
     </div>
