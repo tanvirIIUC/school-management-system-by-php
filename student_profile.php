@@ -18,7 +18,8 @@
 
        <div class="brnd">
        <a class="active" href="home.php"><b><em>Home</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <!-- <a href="student_login.php"><b><em>Student</b></em></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+       
+   <a href="home.php"><b><em>logout</b></em></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
   <!-- <a href="teacher_login"><b><em>Teacher</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
   <!-- <a href="home.php"><em><b>About</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 
@@ -39,11 +40,8 @@ if(!isset($s_id)){
 //    header('location:student_login.php');
 };
 
-if(isset($_GET['logout'])){
-   unset($s_id);
-   session_destroy();
-   header('location:student_login.php');
-}
+
+
 
 ?>
 <?php

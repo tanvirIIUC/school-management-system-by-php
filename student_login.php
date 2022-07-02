@@ -29,10 +29,10 @@ if(isset($_POST['submit'])){
 	  header('location:student_profile.php');
 
    }
-    else echo 'Wrong Password Or id';
-  
-
-
+    // else echo 'Wrong Password Or id';
+     else{
+    $message[] = 'incorrect email or password!';
+     }
 }
 
 
@@ -85,6 +85,13 @@ if(isset($_POST['submit'])){
 
 	<input class="btn btn-primary" type="submit" name="submit" value="Log in">
     <a href="student_create.php" class="btn btn-primary">create</a>
+    <?php
+      if(isset($message)){
+         foreach($message as $message){
+            echo '<div style=" color: red" class="message">'.$message.'</div>';
+         }
+      }
+      ?>
       </div>
 
     </div>

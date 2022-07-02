@@ -73,17 +73,13 @@
     </div>
 -->
 <section class="navi"> 
-    
-
        <div class="brnd">
        <a class="active" href="home.php"><b><em>Home</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <!-- <a href="student_login.php"><b><em>Student</b></em></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
   <!-- <a href="#contact"><b><em>Teacher</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
   <!-- <a href="#about"><em><b>About</em></b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-
        </div>
        <div class="scl"> <p> <b><em>SCHOOL</em></b></p>   </div>
-       
 </section> 
 <br><br>
 
@@ -101,6 +97,7 @@
     <div class="card">
     <div class="card-body" style=" background-color: #002147;">
     <h5 style="color:rgb(250, 250, 252);" class="card-title">TEACHER CREATE</h5>
+
   <form action="teacher_add.php" method="POST">
          <p>
            <label>Username</label>
@@ -145,6 +142,7 @@
 
 	<input class="btn btn-primary" type="submit" value="SUBMIT">
     <a href="teacher_login.php" class="btn btn-primary">login</a>
+   
     </form>
   </div>
     </div>
